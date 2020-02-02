@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CB9CF4AC83587917E9D40DC /* Pods_SmartCity_QR_scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7611BE8360CACE6F950B370 /* Pods_SmartCity_QR_scanner.framework */; };
+		A5178BEA23C7033E00C47A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5178BE923C7033E00C47A36 /* AppDelegate.swift */; };
+		A5178BEC23C7033E00C47A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */; };
+		A5178BF323C7033E00C47A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5178BF123C7033E00C47A36 /* Main.storyboard */; };
+		A5178BF523C7034500C47A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5178BF423C7034500C47A36 /* Assets.xcassets */; };
+		A5178BF823C7034500C47A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5178BF623C7034500C47A36 /* LaunchScreen.storyboard */; };
+		A55E692923D6DD3100BF268B /* StartScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E692823D6DD3100BF268B /* StartScanViewController.swift */; };
+		A55E692E23D6E27A00BF268B /* ui.png in Resources */ = {isa = PBXBuildFile; fileRef = A55E692D23D6E27A00BF268B /* ui.png */; };
+		A586E9BF23E445EE00E2929F /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586E9BE23E445EE00E2929F /* AlertService.swift */; };
+		A586E9C223E4495500E2929F /* QRSuccessAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = A586E9C123E4495500E2929F /* QRSuccessAlert.xib */; };
+		A586E9C423E44B9600E2929F /* QRSuccessAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */; };
+		A5A1712D23E57D2200D7E73C /* UIEnhancementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */; };
+		A5C6A32D23E378BD00AE9078 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6A32C23E378BD00AE9078 /* Constants.swift */; };
+		A5C6A33023E3793400AE9078 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6A32F23E3793400AE9078 /* UIButton+Ext.swift */; };
+		A5EFA48023E5698C00ECD028 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA47F23E5698C00ECD028 /* ScanViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		77C4FF600EF6340ED1CB7FEC /* Pods-SmartCity QR-scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCity QR-scanner.release.xcconfig"; path = "Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner.release.xcconfig"; sourceTree = "<group>"; };
+		A5178BE623C7033E00C47A36 /* SmartCity QR-scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartCity QR-scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5178BE923C7033E00C47A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A5178BF223C7033E00C47A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5178BF423C7034500C47A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5178BF723C7034500C47A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5178BF923C7034500C47A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55E692823D6DD3100BF268B /* StartScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScanViewController.swift; sourceTree = "<group>"; };
+		A55E692D23D6E27A00BF268B /* ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui.png; sourceTree = "<group>"; };
+		A586E9BE23E445EE00E2929F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		A586E9C123E4495500E2929F /* QRSuccessAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QRSuccessAlert.xib; path = "SmartCity QR-scanner/Views/QRSuccessAlert.xib"; sourceTree = SOURCE_ROOT; };
+		A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSuccessAlert.swift; sourceTree = "<group>"; };
+		A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEnhancementService.swift; sourceTree = "<group>"; };
+		A5C6A32C23E378BD00AE9078 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A5C6A32F23E3793400AE9078 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		A5EFA47F23E5698C00ECD028 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		B9E52F8B7F18F192EDAA2C89 /* Pods-SmartCity QR-scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCity QR-scanner.debug.xcconfig"; path = "Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		E7611BE8360CACE6F950B370 /* Pods_SmartCity_QR_scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCity_QR_scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5178BE323C7033E00C47A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CB9CF4AC83587917E9D40DC /* Pods_SmartCity_QR_scanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		059489F6CA747E7B277BF0B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9E52F8B7F18F192EDAA2C89 /* Pods-SmartCity QR-scanner.debug.xcconfig */,
+				77C4FF600EF6340ED1CB7FEC /* Pods-SmartCity QR-scanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A1419170F67AB394DB095DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7611BE8360CACE6F950B370 /* Pods_SmartCity_QR_scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5178BDD23C7033E00C47A36 = {
+			isa = PBXGroup;
+			children = (
+				A5178BE823C7033E00C47A36 /* SmartCity QR-scanner */,
+				A5178BE723C7033E00C47A36 /* Products */,
+				059489F6CA747E7B277BF0B0 /* Pods */,
+				9A1419170F67AB394DB095DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A5178BE723C7033E00C47A36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5178BE623C7033E00C47A36 /* SmartCity QR-scanner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5178BE823C7033E00C47A36 /* SmartCity QR-scanner */ = {
+			isa = PBXGroup;
+			children = (
+				A571673B23E43B57003A9ACD /* Helpers */,
+				A5C6A32E23E3791700AE9078 /* Extensions */,
+				A5C6A32B23E378B200AE9078 /* Utilities */,
+				A586E9C023E4493000E2929F /* Views */,
+				A55E692B23D6DE9E00BF268B /* ViewControllers */,
+				A5178BE923C7033E00C47A36 /* AppDelegate.swift */,
+				A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */,
+				A5178BF423C7034500C47A36 /* Assets.xcassets */,
+				A55E692D23D6E27A00BF268B /* ui.png */,
+				A5178BF923C7034500C47A36 /* Info.plist */,
+			);
+			path = "SmartCity QR-scanner";
+			sourceTree = "<group>";
+		};
+		A55E692B23D6DE9E00BF268B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5EFA48123E56AD700ECD028 /* Scanning */,
+				A586E9C523E44B9D00E2929F /* Alerts */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A55E692C23D6DF6900BF268B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A5178BF123C7033E00C47A36 /* Main.storyboard */,
+				A5178BF623C7034500C47A36 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A571673B23E43B57003A9ACD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A586E9BE23E445EE00E2929F /* AlertService.swift */,
+				A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A586E9C023E4493000E2929F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A55E692C23D6DF6900BF268B /* Storyboards */,
+				A586E9C123E4495500E2929F /* QRSuccessAlert.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A586E9C523E44B9D00E2929F /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		A5C6A32B23E378B200AE9078 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A5C6A32C23E378BD00AE9078 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A5C6A32E23E3791700AE9078 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5C6A32F23E3793400AE9078 /* UIButton+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5EFA48123E56AD700ECD028 /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				A55E692823D6DD3100BF268B /* StartScanViewController.swift */,
+				A5EFA47F23E5698C00ECD028 /* ScanViewController.swift */,
+			);
+			path = Scanning;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5178BE523C7033E00C47A36 /* SmartCity QR-scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5178BFC23C7034500C47A36 /* Build configuration list for PBXNativeTarget "SmartCity QR-scanner" */;
+			buildPhases = (
+				6532CB7CBAA3CF409010117B /* [CP] Check Pods Manifest.lock */,
+				A5178BE223C7033E00C47A36 /* Sources */,
+				A5178BE323C7033E00C47A36 /* Frameworks */,
+				A5178BE423C7033E00C47A36 /* Resources */,
+				19C8B8DBEBC7BB14D02C6012 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmartCity QR-scanner";
+			productName = "SmartCity QR-scanner";
+			productReference = A5178BE623C7033E00C47A36 /* SmartCity QR-scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5178BDE23C7033E00C47A36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alexander Parshakov";
+				TargetAttributes = {
+					A5178BE523C7033E00C47A36 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = A5178BE123C7033E00C47A36 /* Build configuration list for PBXProject "SmartCity QR-scanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5178BDD23C7033E00C47A36;
+			productRefGroup = A5178BE723C7033E00C47A36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5178BE523C7033E00C47A36 /* SmartCity QR-scanner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5178BE423C7033E00C47A36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5178BF823C7034500C47A36 /* LaunchScreen.storyboard in Resources */,
+				A586E9C223E4495500E2929F /* QRSuccessAlert.xib in Resources */,
+				A5178BF523C7034500C47A36 /* Assets.xcassets in Resources */,
+				A5178BF323C7033E00C47A36 /* Main.storyboard in Resources */,
+				A55E692E23D6E27A00BF268B /* ui.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19C8B8DBEBC7BB14D02C6012 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6532CB7CBAA3CF409010117B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartCity QR-scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5178BE223C7033E00C47A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A1712D23E57D2200D7E73C /* UIEnhancementService.swift in Sources */,
+				A586E9C423E44B9600E2929F /* QRSuccessAlert.swift in Sources */,
+				A5C6A33023E3793400AE9078 /* UIButton+Ext.swift in Sources */,
+				A586E9BF23E445EE00E2929F /* AlertService.swift in Sources */,
+				A5178BEA23C7033E00C47A36 /* AppDelegate.swift in Sources */,
+				A5178BEC23C7033E00C47A36 /* SceneDelegate.swift in Sources */,
+				A55E692923D6DD3100BF268B /* StartScanViewController.swift in Sources */,
+				A5C6A32D23E378BD00AE9078 /* Constants.swift in Sources */,
+				A5EFA48023E5698C00ECD028 /* ScanViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5178BF123C7033E00C47A36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5178BF223C7033E00C47A36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5178BF623C7034500C47A36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5178BF723C7034500C47A36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5178BFA23C7034500C47A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5178BFB23C7034500C47A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5178BFD23C7034500C47A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E52F8B7F18F192EDAA2C89 /* Pods-SmartCity QR-scanner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S87GRA33NJ;
+				INFOPLIST_FILE = "SmartCity QR-scanner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexanderParshakov.SmartCity-QR-scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5178BFE23C7034500C47A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77C4FF600EF6340ED1CB7FEC /* Pods-SmartCity QR-scanner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S87GRA33NJ;
+				INFOPLIST_FILE = "SmartCity QR-scanner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexanderParshakov.SmartCity-QR-scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5178BE123C7033E00C47A36 /* Build configuration list for PBXProject "SmartCity QR-scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5178BFA23C7034500C47A36 /* Debug */,
+				A5178BFB23C7034500C47A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5178BFC23C7034500C47A36 /* Build configuration list for PBXNativeTarget "SmartCity QR-scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5178BFD23C7034500C47A36 /* Debug */,
+				A5178BFE23C7034500C47A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5178BDE23C7033E00C47A36 /* Project object */;
+}

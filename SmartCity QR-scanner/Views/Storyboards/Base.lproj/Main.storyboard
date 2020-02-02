@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="mEU-qc-tKA">
+            <objects>
+                <viewController id="zHd-oo-bxP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gb1-g0-vva">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LWu-Im-Jl8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="History" id="ZNa-6V-P4H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaz-1W-K1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="721"/>
+        </scene>
+        <!--Start Scan View Controller-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="StartScanViewController" customModule="SmartCity_QR_scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScanImage" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-7f-qY7">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="oY0-r4-rO8"/>
+                                    <constraint firstAttribute="height" constant="240" id="yLa-Xo-5sI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNZ-Di-ZFP">
+                                <rect key="frame" x="87" y="518" width="240" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kDK-KL-coJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Сканировать">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onScanButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="SEo-zY-mrR"/>
+                                    <segue destination="FPm-B3-i0C" kind="show" identifier="toScanViewController" id="12G-WV-0fc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Yb-7f-qY7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="ACs-KF-bRf"/>
+                            <constraint firstItem="0Yb-7f-qY7" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Cxb-7K-6Va"/>
+                            <constraint firstItem="zNZ-Di-ZFP" firstAttribute="top" secondItem="0Yb-7f-qY7" secondAttribute="bottom" constant="30" id="eH6-4E-zqn"/>
+                            <constraint firstItem="zNZ-Di-ZFP" firstAttribute="width" secondItem="0Yb-7f-qY7" secondAttribute="width" id="mgw-tf-ain"/>
+                            <constraint firstItem="zNZ-Di-ZFP" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="v3j-tD-9gf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Scan" id="acW-dT-cKf"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="scanButton" destination="zNZ-Di-ZFP" id="H4J-Zs-FHM"/>
+                        <outlet property="scanImage" destination="0Yb-7f-qY7" id="UkA-SU-g3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="721"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="zHd-oo-bxP" kind="relationship" relationship="viewControllers" id="sDn-Db-k0Z"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="Mv6-6K-TPd"/>
+                        <segue destination="MQ4-p0-rp2" kind="relationship" relationship="viewControllers" id="ejT-Ph-GDa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fOI-Hp-BZp">
+            <objects>
+                <viewController id="MQ4-p0-rp2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQb-V9-OqF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kcu-OJ-85N"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Settings" id="Iaf-GQ-mfc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJ8-kj-nxo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="721"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="Q9a-l0-nKF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="FPm-B3-i0C" customClass="ScanViewController" customModule="SmartCity_QR_scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2UI-rJ-kUh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-HI-FrX">
+                                <rect key="frame" x="87" y="248" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="jeU-jn-ICi"/>
+                                    <constraint firstAttribute="height" constant="240" id="v53-hq-xcW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdX-Jm-0ah">
+                                <rect key="frame" x="107" y="661" width="200" height="55"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ulo-7C-rIN"/>
+                                    <constraint firstAttribute="height" constant="55" id="xTo-z0-Pag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Назад">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCancelButtonTapped:" destination="FPm-B3-i0C" eventType="touchUpInside" id="N1x-Lj-P57"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dfp-HI-FrX" firstAttribute="centerY" secondItem="2UI-rJ-kUh" secondAttribute="centerY" priority="999" id="1lB-iF-Mdc"/>
+                            <constraint firstItem="dfp-HI-FrX" firstAttribute="centerX" secondItem="2UI-rJ-kUh" secondAttribute="centerX" id="Och-ac-w6o"/>
+                            <constraint firstItem="reV-Hv-gzU" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AdX-Jm-0ah" secondAttribute="trailing" constant="50" id="SF9-Ui-Sk9"/>
+                            <constraint firstItem="AdX-Jm-0ah" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="reV-Hv-gzU" secondAttribute="leading" constant="50" id="ZLU-dW-Zyc"/>
+                            <constraint firstItem="reV-Hv-gzU" firstAttribute="bottom" secondItem="AdX-Jm-0ah" secondAttribute="bottom" constant="20" id="bIg-Ua-ldU"/>
+                            <constraint firstItem="AdX-Jm-0ah" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dfp-HI-FrX" secondAttribute="bottom" constant="20" id="pEv-ed-6wa"/>
+                            <constraint firstItem="AdX-Jm-0ah" firstAttribute="centerX" secondItem="2UI-rJ-kUh" secondAttribute="centerX" id="u2Y-qd-qEZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="reV-Hv-gzU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lwe-up-BYp"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="cancelButton" destination="AdX-Jm-0ah" id="33a-ec-0fx"/>
+                        <outlet property="targetOutline" destination="dfp-HI-FrX" id="VGO-q2-PG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRu-wW-7I7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="1427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="History" width="32" height="32"/>
+        <image name="Scan" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="ScanImage" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="Settings" width="50" height="50"/>
+    </resources>
+</document>

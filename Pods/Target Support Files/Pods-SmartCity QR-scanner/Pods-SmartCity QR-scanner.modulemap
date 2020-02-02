@@ -1,0 +1,6 @@
+framework module Pods_SmartCity_QR_scanner {
+  umbrella header "Pods-SmartCity QR-scanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

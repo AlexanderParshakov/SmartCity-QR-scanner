@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Hero/Hero.framework
+${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework
+${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework

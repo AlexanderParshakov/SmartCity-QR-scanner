@@ -81,7 +81,7 @@ extension ScanViewController {
     }
 }
 
-// MARK: -
+// MARK: - Handling Scanning
 extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
     private func initScanning() {
         
@@ -129,6 +129,8 @@ extension ScanViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
 }
 
+
+// MARK: Communicating with the EntryKit Alert
 extension ScanViewController: FromSuccessAlertToScanViewDelegate {
     func alertDidDisappear() {
         session.startRunning()

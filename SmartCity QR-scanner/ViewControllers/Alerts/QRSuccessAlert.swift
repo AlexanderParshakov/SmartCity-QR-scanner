@@ -50,7 +50,7 @@ class QRSuccessAlert: UIView {
         setupButtons()
     }
     private func setupButtons() {
-        UIEnhancementService.beautifyAccentButton(button: continueButton, cornerRadius: 15)
+        UIEnhancementService.beautifyAccentView(view: continueButton, cornerRadius: 15)
         UIEnhancementService.beautifyNormalButton(button: cancelButton)
     }
 }

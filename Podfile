@@ -5,5 +5,4 @@ target 'SmartCity QR-scanner' do
 
   pod 'SwiftEntryKit'
   pod 'Hero'
-
 end

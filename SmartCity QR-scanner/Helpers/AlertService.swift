@@ -36,10 +36,42 @@ final class AlertService {
         
         SwiftEntryKit.display(entry: contentView, using: attributes)
     }
-    
     static func hideQRSuccess(delegate: FromSuccessAlertToScanViewDelegate?) {
         SwiftEntryKit.dismiss(.specific(entryName: Constants.IDs.EntryKit.qrSuccessAlert)) {
             delegate?.alertDidDisappear()
         }
+    }
+    
+    static func showChangeThemeSuccess() {
+        // Generate top floating entry and set some properties
+        var attributes = EKAttributes.centerFloat
+        attributes.entryBackground = .gradient(gradient: .init(
+            colors: [EKColor(ThemeManager.currentTheme.gradientUIColor[0]), EKColor(ThemeManager.currentTheme.gradientUIColor[1])],
+            startPoint: .zero,
+            endPoint: CGPoint(x: 1, y: 1)))
+        attributes.popBehavior = .animated(animation: .init(translate: .init(duration: 0.3), scale: .init(from: 1, to: 0.7, duration: 0.7)))
+        attributes.entranceAnimation = .init(
+            translate: .init(duration: 0.5, anchorPosition: .top, spring: .init(damping: 1, initialVelocity: 0)),
+            scale: .init(from: 0.8, to: 1, duration: 0.5),
+            fade: .init(from: 0.8, to: 1, duration: 0.3))
+        attributes.shadow = .active(with: .init(color: .black, opacity: 0.5, radius: 10, offset: .zero))
+        attributes.statusBar = .dark
+        attributes.scroll = .enabled(swipeable: true, pullbackAnimation: .jolt)
+        attributes.hapticFeedbackType = .success
+        attributes.screenBackground = .visualEffect(style: .standard)
+        attributes.displayDuration = 0.5
+        
+        
+        let title = EKProperty.LabelContent(text: "Тема была успешно изменена", style: .init(font: .boldSystemFont(ofSize: 22), color: .white))
+        let description = EKProperty.LabelContent(text: "", style: .init(font: .systemFont(ofSize: 17), color: .standardBackground))
+        
+        let origImage = UIImage(named: "Checkmark")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        let image = EKProperty.ImageContent(image: tintedImage!, size: CGSize(width: 50, height: 50), tint: .init(light: .white, dark: .white))
+        let simpleMessage = EKSimpleMessage(image: image, title: title, description: description)
+        let notificationMessage = EKNotificationMessage(simpleMessage: simpleMessage)
+        
+        let contentView = EKNotificationMessageView(with: notificationMessage)
+        SwiftEntryKit.display(entry: contentView, using: attributes)
     }
 }

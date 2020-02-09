@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 
 struct Constants {
+    private init() {}
     
-    struct GradientSets {
-        
+    struct Titles {
+        static let settings = "Настройки"
+    }
+    
+    struct CGGradientSets {
         static let burningOrange = [hexStringToUIColor(hex: "#FF416C").cgColor, hexStringToUIColor(hex: "#FF4B2B").cgColor]
         static let celestial = [hexStringToUIColor(hex: "#C33764").cgColor, hexStringToUIColor(hex: "#1D2671").cgColor]
         static let deepSpace = [hexStringToUIColor(hex: "#000000").cgColor, hexStringToUIColor(hex: "#434343").cgColor]
@@ -20,6 +24,21 @@ struct Constants {
         static let clouds = [hexStringToUIColor(hex: "#ECE9E6").cgColor, hexStringToUIColor(hex: "#F9FCFF").cgColor]
         static let amin = [hexStringToUIColor(hex: "#4A00E0").cgColor, hexStringToUIColor(hex: "#8E2DE2").cgColor]
     }
+    struct UIGradientSets {
+        static let burningOrange = [hexStringToUIColor(hex: "#FF416C"), hexStringToUIColor(hex: "#FF4B2B")]
+        static let celestial = [hexStringToUIColor(hex: "#C33764"), hexStringToUIColor(hex: "#1D2671")]
+        static let deepSpace = [hexStringToUIColor(hex: "#000000"), hexStringToUIColor(hex: "#434343")]
+        static let flare = [hexStringToUIColor(hex: "#f12711"), hexStringToUIColor(hex: "#f5af19")]
+        static let clouds = [hexStringToUIColor(hex: "#ECE9E6"), hexStringToUIColor(hex: "#F9FCFF")]
+        static let amin = [hexStringToUIColor(hex: "#4A00E0"), hexStringToUIColor(hex: "#8E2DE2")]
+    }
+    
+    static let Themes: [Theme] = [
+        Theme(withName: "Amin", normalColor: .systemIndigo, gradient: Constants.CGGradientSets.amin, gradientUIColor: Constants.UIGradientSets.amin),
+        Theme(withName: "Flare", normalColor: .systemOrange, gradient: Constants.CGGradientSets.flare, gradientUIColor: Constants.UIGradientSets.flare),
+        Theme(withName: "Celestial", normalColor: .systemPurple, gradient: Constants.CGGradientSets.celestial, gradientUIColor: Constants.UIGradientSets.celestial)
+    ]
+    
     
     struct IDs {
         struct EntryKit {

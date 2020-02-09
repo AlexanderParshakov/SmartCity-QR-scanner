@@ -27,6 +27,10 @@ class StartScanViewController: UIViewController {
         
         scanButton.hero.id = Constants.IDs.Hero.scanButton
         
-        UIEnhancementService.beautifyAccentButton(button: scanButton)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIEnhancementService.beautifyAccentView(view: scanButton)
     }
 }

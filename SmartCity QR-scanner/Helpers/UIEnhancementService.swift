@@ -13,8 +13,13 @@ struct UIEnhancementService {
     
     private init() {}
     
-    static func beautifyAccentButton(button: UIButton, cornerRadius: CGFloat = 10) {
-        button.applyGradient(colors: Constants.GradientSets.amin, cornerRadius: cornerRadius)
+    static func beautifyAccentView(view: UIView, cornerRadius: CGFloat = 10) {
+        view.layer.sublayers?.forEach {
+            if $0.name == "current" {
+                $0.removeFromSuperlayer()
+            }
+        }
+        view.applyGradient(colors: ThemeManager.currentTheme.gradientColor, cornerRadius: cornerRadius)
     }
     static func beautifyNormalButton(button: UIButton) {
         button.layer.cornerRadius = 15

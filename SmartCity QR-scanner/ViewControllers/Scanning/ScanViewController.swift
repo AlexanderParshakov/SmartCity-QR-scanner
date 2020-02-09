@@ -30,6 +30,7 @@ class ScanViewController: UIViewController {
     var delegate: FromSuccessAlertToScanViewDelegate?
     var video = AVCaptureVideoPreviewLayer()
     let session = AVCaptureSession()
+    var timer: Timer?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -37,8 +38,9 @@ class ScanViewController: UIViewController {
         
         cancelButton.hero.id = Constants.IDs.Hero.scanButton
         
-        setupTargetOutline()
-        UIEnhancementService.beautifyAccentButton(button: cancelButton)
+        UIEnhancementService.beautifyAccentView(view: cancelButton)
+        
+        targetOutline.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,14 +49,35 @@ class ScanViewController: UIViewController {
         initScanning()
         self.view.bringSubviewToFront(cancelButton)
         self.view.bringSubviewToFront(targetOutline)
+        self.timer?.invalidate()
+        self.timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { (_) in
+            self.setupTargetOutline()
+        })
     }
 } 
 
 // MARK: - Configure UI
 extension ScanViewController {
     private func setupTargetOutline() {
-        targetOutline.layer.borderColor = UIColor.systemBlue.cgColor
-        targetOutline.layer.borderWidth = 5
+        let gradient = CAGradientLayer()
+        gradient.frame =  CGRect(origin: .zero, size: targetOutline.frame.size)
+        gradient.colors = ThemeManager.currentTheme.gradientColor.reversed()
+
+        let shape = CAShapeLayer()
+        shape.lineWidth = 10
+        targetOutline.layer.cornerRadius = 20
+        shape.path = UIBezierPath(roundedRect: targetOutline.bounds, cornerRadius: targetOutline.layer.cornerRadius).cgPath
+        shape.strokeColor = UIColor.black.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        gradient.mask = shape
+
+        targetOutline.layer.addSublayer(gradient)
+        targetOutline.clipsToBounds = true
+        targetOutline.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 0.3) {
+            self.targetOutline.alpha = 1
+        }
     }
 }
 

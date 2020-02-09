@@ -13,14 +13,20 @@
 		A5178BF323C7033E00C47A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5178BF123C7033E00C47A36 /* Main.storyboard */; };
 		A5178BF523C7034500C47A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5178BF423C7034500C47A36 /* Assets.xcassets */; };
 		A5178BF823C7034500C47A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5178BF623C7034500C47A36 /* LaunchScreen.storyboard */; };
+		A5245AC023EDF82100D8E174 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5245ABF23EDF82100D8E174 /* SettingsViewController.swift */; };
+		A52472AF23ED54D9009AE84E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52472AE23ED54D9009AE84E /* Enums.swift */; };
+		A52472B123ED561F009AE84E /* ThemeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52472B023ED561F009AE84E /* ThemeViewCell.swift */; };
+		A552E21A23EED306004CB71F /* LayerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A552E21923EED306004CB71F /* LayerContainerView.swift */; };
 		A55E692923D6DD3100BF268B /* StartScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E692823D6DD3100BF268B /* StartScanViewController.swift */; };
-		A55E692E23D6E27A00BF268B /* ui.png in Resources */ = {isa = PBXBuildFile; fileRef = A55E692D23D6E27A00BF268B /* ui.png */; };
+		A575418D23E9F5E70042B249 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575418C23E9F5E70042B249 /* ThemeManager.swift */; };
+		A575419023E9F61B0042B249 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575418F23E9F61B0042B249 /* Theme.swift */; };
 		A586E9BF23E445EE00E2929F /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586E9BE23E445EE00E2929F /* AlertService.swift */; };
 		A586E9C223E4495500E2929F /* QRSuccessAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = A586E9C123E4495500E2929F /* QRSuccessAlert.xib */; };
 		A586E9C423E44B9600E2929F /* QRSuccessAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */; };
+		A5941DCC23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5941DCB23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift */; };
 		A5A1712D23E57D2200D7E73C /* UIEnhancementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */; };
 		A5C6A32D23E378BD00AE9078 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6A32C23E378BD00AE9078 /* Constants.swift */; };
-		A5C6A33023E3793400AE9078 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6A32F23E3793400AE9078 /* UIButton+Ext.swift */; };
+		A5C6A33023E3793400AE9078 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6A32F23E3793400AE9078 /* UIView+Ext.swift */; };
 		A5EFA48023E5698C00ECD028 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFA47F23E5698C00ECD028 /* ScanViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,14 +39,20 @@
 		A5178BF423C7034500C47A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5178BF723C7034500C47A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5178BF923C7034500C47A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5245ABF23EDF82100D8E174 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A52472AE23ED54D9009AE84E /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		A52472B023ED561F009AE84E /* ThemeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewCell.swift; sourceTree = "<group>"; };
+		A552E21923EED306004CB71F /* LayerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContainerView.swift; sourceTree = "<group>"; };
 		A55E692823D6DD3100BF268B /* StartScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScanViewController.swift; sourceTree = "<group>"; };
-		A55E692D23D6E27A00BF268B /* ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui.png; sourceTree = "<group>"; };
+		A575418C23E9F5E70042B249 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		A575418F23E9F61B0042B249 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A586E9BE23E445EE00E2929F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		A586E9C123E4495500E2929F /* QRSuccessAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QRSuccessAlert.xib; path = "SmartCity QR-scanner/Views/QRSuccessAlert.xib"; sourceTree = SOURCE_ROOT; };
 		A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSuccessAlert.swift; sourceTree = "<group>"; };
+		A5941DCB23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEnhancementService.swift; sourceTree = "<group>"; };
 		A5C6A32C23E378BD00AE9078 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A5C6A32F23E3793400AE9078 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		A5C6A32F23E3793400AE9078 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		A5EFA47F23E5698C00ECD028 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		B9E52F8B7F18F192EDAA2C89 /* Pods-SmartCity QR-scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartCity QR-scanner.debug.xcconfig"; path = "Target Support Files/Pods-SmartCity QR-scanner/Pods-SmartCity QR-scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		E7611BE8360CACE6F950B370 /* Pods_SmartCity_QR_scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartCity_QR_scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +108,8 @@
 		A5178BE823C7033E00C47A36 /* SmartCity QR-scanner */ = {
 			isa = PBXGroup;
 			children = (
+				A52472AC23ED54C8009AE84E /* Core */,
+				A575418E23E9F6090042B249 /* ThemeManagement */,
 				A571673B23E43B57003A9ACD /* Helpers */,
 				A5C6A32E23E3791700AE9078 /* Extensions */,
 				A5C6A32B23E378B200AE9078 /* Utilities */,
@@ -104,15 +118,32 @@
 				A5178BE923C7033E00C47A36 /* AppDelegate.swift */,
 				A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */,
 				A5178BF423C7034500C47A36 /* Assets.xcassets */,
-				A55E692D23D6E27A00BF268B /* ui.png */,
 				A5178BF923C7034500C47A36 /* Info.plist */,
 			);
 			path = "SmartCity QR-scanner";
 			sourceTree = "<group>";
 		};
+		A52472AC23ED54C8009AE84E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A52472AD23ED54CD009AE84E /* Enums */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A52472AD23ED54CD009AE84E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A5C6A32C23E378BD00AE9078 /* Constants.swift */,
+				A52472AE23ED54D9009AE84E /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		A55E692B23D6DE9E00BF268B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A5941DC923ED4FC900D4D9B8 /* Settings */,
 				A5EFA48123E56AD700ECD028 /* Scanning */,
 				A586E9C523E44B9D00E2929F /* Alerts */,
 			);
@@ -137,11 +168,21 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		A575418E23E9F6090042B249 /* ThemeManagement */ = {
+			isa = PBXGroup;
+			children = (
+				A575418C23E9F5E70042B249 /* ThemeManager.swift */,
+				A575418F23E9F61B0042B249 /* Theme.swift */,
+			);
+			path = ThemeManagement;
+			sourceTree = "<group>";
+		};
 		A586E9C023E4493000E2929F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A55E692C23D6DF6900BF268B /* Storyboards */,
 				A586E9C123E4495500E2929F /* QRSuccessAlert.xib */,
+				A55E692C23D6DF6900BF268B /* Storyboards */,
+				A552E21923EED306004CB71F /* LayerContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,10 +195,27 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		A5941DC923ED4FC900D4D9B8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A5245ABF23EDF82100D8E174 /* SettingsViewController.swift */,
+				A5941DCA23ED4FD400D4D9B8 /* ColorSettings */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A5941DCA23ED4FD400D4D9B8 /* ColorSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A5941DCB23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift */,
+				A52472B023ED561F009AE84E /* ThemeViewCell.swift */,
+			);
+			path = ColorSettings;
+			sourceTree = "<group>";
+		};
 		A5C6A32B23E378B200AE9078 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A5C6A32C23E378BD00AE9078 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -165,7 +223,7 @@
 		A5C6A32E23E3791700AE9078 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A5C6A32F23E3793400AE9078 /* UIButton+Ext.swift */,
+				A5C6A32F23E3793400AE9078 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,7 +301,6 @@
 				A586E9C223E4495500E2929F /* QRSuccessAlert.xib in Resources */,
 				A5178BF523C7034500C47A36 /* Assets.xcassets in Resources */,
 				A5178BF323C7033E00C47A36 /* Main.storyboard in Resources */,
-				A55E692E23D6E27A00BF268B /* ui.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,13 +355,20 @@
 			files = (
 				A5A1712D23E57D2200D7E73C /* UIEnhancementService.swift in Sources */,
 				A586E9C423E44B9600E2929F /* QRSuccessAlert.swift in Sources */,
-				A5C6A33023E3793400AE9078 /* UIButton+Ext.swift in Sources */,
+				A5C6A33023E3793400AE9078 /* UIView+Ext.swift in Sources */,
 				A586E9BF23E445EE00E2929F /* AlertService.swift in Sources */,
+				A575419023E9F61B0042B249 /* Theme.swift in Sources */,
 				A5178BEA23C7033E00C47A36 /* AppDelegate.swift in Sources */,
 				A5178BEC23C7033E00C47A36 /* SceneDelegate.swift in Sources */,
 				A55E692923D6DD3100BF268B /* StartScanViewController.swift in Sources */,
+				A5245AC023EDF82100D8E174 /* SettingsViewController.swift in Sources */,
+				A52472AF23ED54D9009AE84E /* Enums.swift in Sources */,
+				A575418D23E9F5E70042B249 /* ThemeManager.swift in Sources */,
+				A52472B123ED561F009AE84E /* ThemeViewCell.swift in Sources */,
 				A5C6A32D23E378BD00AE9078 /* Constants.swift in Sources */,
 				A5EFA48023E5698C00ECD028 /* ScanViewController.swift in Sources */,
+				A552E21A23EED306004CB71F /* LayerContainerView.swift in Sources */,
+				A5941DCC23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +503,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -47,7 +47,7 @@
 		A575418C23E9F5E70042B249 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A575418F23E9F61B0042B249 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A586E9BE23E445EE00E2929F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
-		A586E9C123E4495500E2929F /* QRSuccessAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QRSuccessAlert.xib; path = "SmartCity QR-scanner/Views/QRSuccessAlert.xib"; sourceTree = SOURCE_ROOT; };
+		A586E9C123E4495500E2929F /* QRSuccessAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QRSuccessAlert.xib; path = "SmartCity QR-scanner/Views/XIBs/QRSuccessAlert.xib"; sourceTree = SOURCE_ROOT; };
 		A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSuccessAlert.swift; sourceTree = "<group>"; };
 		A5941DCB23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEnhancementService.swift; sourceTree = "<group>"; };
@@ -108,15 +108,12 @@
 		A5178BE823C7033E00C47A36 /* SmartCity QR-scanner */ = {
 			isa = PBXGroup;
 			children = (
+				A556725E23F002B3007D826D /* Modules */,
 				A52472AC23ED54C8009AE84E /* Core */,
-				A575418E23E9F6090042B249 /* ThemeManagement */,
 				A571673B23E43B57003A9ACD /* Helpers */,
-				A5C6A32E23E3791700AE9078 /* Extensions */,
-				A5C6A32B23E378B200AE9078 /* Utilities */,
-				A586E9C023E4493000E2929F /* Views */,
+				A55E692C23D6DF6900BF268B /* Storyboards */,
 				A55E692B23D6DE9E00BF268B /* ViewControllers */,
-				A5178BE923C7033E00C47A36 /* AppDelegate.swift */,
-				A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */,
+				A586E9C023E4493000E2929F /* Views */,
 				A5178BF423C7034500C47A36 /* Assets.xcassets */,
 				A5178BF923C7034500C47A36 /* Info.plist */,
 			);
@@ -126,18 +123,53 @@
 		A52472AC23ED54C8009AE84E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A52472AD23ED54CD009AE84E /* Enums */,
+				A556725B23F00250007D826D /* App Management */,
+				A5C6A32E23E3791700AE9078 /* Extensions */,
+				A52472AD23ED54CD009AE84E /* Constants and Enums */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A52472AD23ED54CD009AE84E /* Enums */ = {
+		A52472AD23ED54CD009AE84E /* Constants and Enums */ = {
 			isa = PBXGroup;
 			children = (
 				A5C6A32C23E378BD00AE9078 /* Constants.swift */,
 				A52472AE23ED54D9009AE84E /* Enums.swift */,
 			);
-			path = Enums;
+			path = "Constants and Enums";
+			sourceTree = "<group>";
+		};
+		A556725B23F00250007D826D /* App Management */ = {
+			isa = PBXGroup;
+			children = (
+				A5178BE923C7033E00C47A36 /* AppDelegate.swift */,
+				A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */,
+			);
+			path = "App Management";
+			sourceTree = "<group>";
+		};
+		A556725C23F0026F007D826D /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				A586E9C123E4495500E2929F /* QRSuccessAlert.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		A556725D23F00281007D826D /* Overrides */ = {
+			isa = PBXGroup;
+			children = (
+				A552E21923EED306004CB71F /* LayerContainerView.swift */,
+			);
+			path = Overrides;
+			sourceTree = "<group>";
+		};
+		A556725E23F002B3007D826D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A575418E23E9F6090042B249 /* Theme Management */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		A55E692B23D6DE9E00BF268B /* ViewControllers */ = {
@@ -168,21 +200,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		A575418E23E9F6090042B249 /* ThemeManagement */ = {
+		A575418E23E9F6090042B249 /* Theme Management */ = {
 			isa = PBXGroup;
 			children = (
 				A575418C23E9F5E70042B249 /* ThemeManager.swift */,
 				A575418F23E9F61B0042B249 /* Theme.swift */,
 			);
-			path = ThemeManagement;
+			path = "Theme Management";
 			sourceTree = "<group>";
 		};
 		A586E9C023E4493000E2929F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A586E9C123E4495500E2929F /* QRSuccessAlert.xib */,
-				A55E692C23D6DF6900BF268B /* Storyboards */,
-				A552E21923EED306004CB71F /* LayerContainerView.swift */,
+				A556725D23F00281007D826D /* Overrides */,
+				A556725C23F0026F007D826D /* XIBs */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,13 +242,6 @@
 				A52472B023ED561F009AE84E /* ThemeViewCell.swift */,
 			);
 			path = ColorSettings;
-			sourceTree = "<group>";
-		};
-		A5C6A32B23E378B200AE9078 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A5C6A32E23E3791700AE9078 /* Extensions */ = {

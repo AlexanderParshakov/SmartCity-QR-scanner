@@ -62,12 +62,12 @@ final class AlertService {
         attributes.displayDuration = 0.5
         
         
-        let title = EKProperty.LabelContent(text: "Тема была успешно изменена", style: .init(font: .boldSystemFont(ofSize: 22), color: .white))
+        let title = EKProperty.LabelContent(text: "Тема успешно изменена", style: .init(font: .boldSystemFont(ofSize: 22), color: .white))
         let description = EKProperty.LabelContent(text: "", style: .init(font: .systemFont(ofSize: 17), color: .standardBackground))
         
         let origImage = UIImage(named: "Checkmark")
         let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        let image = EKProperty.ImageContent(image: tintedImage!, size: CGSize(width: 50, height: 50), tint: .init(light: .white, dark: .white))
+        let image = EKProperty.ImageContent(image: tintedImage!, size: CGSize(width: 40, height: 40), tint: .init(light: .white, dark: .white))
         let simpleMessage = EKSimpleMessage(image: image, title: title, description: description)
         let notificationMessage = EKNotificationMessage(simpleMessage: simpleMessage)
         

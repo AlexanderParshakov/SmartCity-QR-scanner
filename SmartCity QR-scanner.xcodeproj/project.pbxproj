@@ -47,7 +47,7 @@
 		A575418C23E9F5E70042B249 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A575418F23E9F61B0042B249 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		A586E9BE23E445EE00E2929F /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
-		A586E9C123E4495500E2929F /* QRSuccessAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QRSuccessAlert.xib; path = "SmartCity QR-scanner/Views/XIBs/QRSuccessAlert.xib"; sourceTree = SOURCE_ROOT; };
+		A586E9C123E4495500E2929F /* QRSuccessAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = QRSuccessAlert.xib; path = "SmartCity QR-scanner/Views/QRSuccessAlert.xib"; sourceTree = SOURCE_ROOT; };
 		A586E9C323E44B9600E2929F /* QRSuccessAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSuccessAlert.swift; sourceTree = "<group>"; };
 		A5941DCB23ED4FFD00D4D9B8 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		A5A1712C23E57D2200D7E73C /* UIEnhancementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEnhancementService.swift; sourceTree = "<group>"; };
@@ -126,6 +126,7 @@
 				A556725B23F00250007D826D /* App Management */,
 				A5C6A32E23E3791700AE9078 /* Extensions */,
 				A52472AD23ED54CD009AE84E /* Constants and Enums */,
+				A556725D23F00281007D826D /* Overrides */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -146,14 +147,6 @@
 				A5178BEB23C7033E00C47A36 /* SceneDelegate.swift */,
 			);
 			path = "App Management";
-			sourceTree = "<group>";
-		};
-		A556725C23F0026F007D826D /* XIBs */ = {
-			isa = PBXGroup;
-			children = (
-				A586E9C123E4495500E2929F /* QRSuccessAlert.xib */,
-			);
-			path = XIBs;
 			sourceTree = "<group>";
 		};
 		A556725D23F00281007D826D /* Overrides */ = {
@@ -212,8 +205,7 @@
 		A586E9C023E4493000E2929F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A556725D23F00281007D826D /* Overrides */,
-				A556725C23F0026F007D826D /* XIBs */,
+				A586E9C123E4495500E2929F /* QRSuccessAlert.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexanderParshakov.SmartCity-QR-scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -566,7 +558,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AlexanderParshakov.SmartCity-QR-scanner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -30,8 +30,7 @@ class ThemeSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        themeTableView.delegate = self
-        themeTableView.dataSource = self
+        setupConformance()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -40,6 +39,11 @@ class ThemeSelectionViewController: UIViewController {
             themeTableView.reloadData()
             wasShown = true
         }
+    }
+    
+    private func setupConformance() {
+        themeTableView.delegate = self
+        themeTableView.dataSource = self
     }
 }
 
@@ -50,28 +54,21 @@ extension ThemeSelectionViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let currentTheme = Constants.Themes[indexPath.row]
         let cell = themeTableView.dequeueReusableCell(withIdentifier: "ThemeViewCell") as! ThemeViewCell
-        cell.set(with: currentTheme, reloading: wasShown)
+        cell.delegate = self
+        
+        let currentTheme = Constants.Themes[indexPath.row]
+        cell.setup(with: currentTheme, reloading: wasShown)
+        
         if currentTheme.gradientColor == ThemeManager.currentTheme.gradientColor {
             cell.theme.isSelected = true
-        }
-        else { cell.theme.isSelected = false }
+        } else { cell.theme.isSelected = false }
         
-        if wasShown {
-            cell.reload = true
-        }
+        if wasShown { cell.reload = true }
+        
         if !cell.theme.isSelected {
-            cell.setButton.setTitle("Выбрать", for: .normal)
-            cell.setButton.layer.borderWidth = 0
-            cell.setButton.layer.borderColor = UIColor.clear.cgColor
-        }
-        else {
-            cell.setButton.setTitle("Выбрано", for: .normal)
-            cell.setButton.layer.borderWidth = 3
-            cell.setButton.layer.borderColor = UIColor.systemBlue.cgColor
-        }
-        cell.delegate = self
+            setButtonSelectionState(in: cell, with: "Выбрать", withWidth: 0, ofColor: UIColor.clear)
+        } else { setButtonSelectionState(in: cell, with: "Выбрано", withWidth: 3, ofColor: UIColor.systemBlue) }
         
         return cell
     }
@@ -80,12 +77,15 @@ extension ThemeSelectionViewController: UITableViewDelegate, UITableViewDataSour
 
     }
     
+    private func setButtonSelectionState(in themeCell: ThemeViewCell, with title: String, withWidth borderWidth: CGFloat, ofColor borderColor: UIColor) {
+        themeCell.setButton.setTitle(title, for: .normal)
+        themeCell.setButton.layer.borderWidth = borderWidth
+        themeCell.setButton.layer.borderColor = borderColor.cgColor
+    }
 }
 
 extension ThemeSelectionViewController: ThemeTableButtonDelegate {
     func updateTable() {
         themeTableView.reloadData()
     }
-    
-    
 }

@@ -44,39 +44,48 @@ class ThemeViewCell: UITableViewCell {
     var delegate: ThemeTableButtonDelegate?
     var reload: Bool = false
     
-    
-    func set(with theme: Theme, reloading: Bool) {
+    // MARK: - Init Function
+    func setup(with theme: Theme, reloading: Bool) {
         self.reload = reloading
-        configureUI()
         
-        self.theme = theme
-        themeNameLabel.text = theme.name
-    }
-    
-    func configureUI() {
-        setDefaults()
+        setupSetButtonAppearance()
+        setUIDefaults()
         addGradient()
-        setupSetButton()
+        
+        setData(theme: theme)
     }
-    
-    func setDefaults() {
-        gradientView.alpha = 0
-        setButton.alpha = 0
+}
+
+// MARK: - UI Section
+extension ThemeViewCell {
+    private func setupSetButtonAppearance() {
+        setButton.layer.cornerRadius = 15
+        setButton.setSlightShadow(shadowColor: .systemGray)
+    }
+    private func setUIDefaults() {
+        self.setGradientAndButtonVisibility(hide: true)
         selectionStyle = .none
     }
-    func addGradient() {
+    private func setGradientAndButtonVisibility(hide: Bool) {
+        self.gradientView.alpha = hide ? .zero : .greatestFiniteMagnitude
+        self.setButton.alpha = hide ? .zero : .greatestFiniteMagnitude
+    }
+    private func addGradient() {
         guard reload else { return }
         gradientView.gradientColor = theme.gradientColor
         gradientView.awakeFromNib()
         gradientView.layoutIfNeeded()
         
         UIView.animate(withDuration: 0.7) {
-            self.gradientView.alpha = 1
-            self.setButton.alpha = 1
+            self.setGradientAndButtonVisibility(hide: false)
         }
     }
-    func setupSetButton() {
-        setButton.layer.cornerRadius = 15
-        setButton.setSlightShadow(shadowColor: .systemGray)
+}
+
+// MARK: - Data Section
+extension ThemeViewCell {
+    private func setData(theme: Theme) {
+        self.theme = theme
+        themeNameLabel.text = theme.name
     }
 }

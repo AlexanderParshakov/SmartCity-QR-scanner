@@ -30,27 +30,27 @@ class ScanViewController: UIViewController {
     var delegate: FromSuccessAlertToScanViewDelegate?
     var video = AVCaptureVideoPreviewLayer()
     let session = AVCaptureSession()
-    var timer: Timer?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cancelButton.hero.id = Constants.IDs.Hero.scanButton
-        
-        UIEnhancementService.beautifyAccentView(view: cancelButton)
-        
         targetOutline.alpha = 0
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIEnhancementService.beautifyAccentView(view: cancelButton)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLayoutSubviews()
         
         initScanning()
         self.view.bringSubviewToFront(cancelButton)
         self.view.bringSubviewToFront(targetOutline)
-        self.timer?.invalidate()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { (_) in
+        
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { (_) in
             self.setupTargetOutline()
         })
     }

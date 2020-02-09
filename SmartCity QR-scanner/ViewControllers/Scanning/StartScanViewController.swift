@@ -21,12 +21,12 @@ class StartScanViewController: UIViewController {
         
     }
     
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scanButton.hero.id = Constants.IDs.Hero.scanButton
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
